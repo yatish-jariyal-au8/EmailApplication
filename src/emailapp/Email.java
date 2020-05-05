@@ -27,6 +27,9 @@ public class Email {
 		//Call a method that return a random password.
 		this.password = randomPassword(defaultPasswordLength);
 		System.out.println("Your password is: " +this.password);
+		
+		//Combine elements to generate email.
+		
 	}
 	
 	//Ask for department.
