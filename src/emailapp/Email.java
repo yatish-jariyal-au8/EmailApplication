@@ -8,9 +8,11 @@ public class Email {
 	private String lastName;
 	private String password;
 	private String department;
-	private int emailBoxCapacity;
+	private String email;
+	private int mailboxCapacity = 500;
 	private int defaultPasswordLength = 10;
 	private String alternateEmail;
+	private String companySuffix = "aeycompany.com";
 	
 	//Constructor to receive first and last name.
 	
@@ -29,7 +31,8 @@ public class Email {
 		System.out.println("Your password is: " +this.password);
 		
 		//Combine elements to generate email.
-		
+		email = firstName.toLowerCase() +"." +lastName.toLowerCase() +"@" +department +"." +companySuffix;
+		System.out.println("You Email is: " +email);
 	}
 	
 	//Ask for department.
@@ -71,8 +74,36 @@ public class Email {
 	}
 	
 	//Set mailbox capacity.
+	public void setMailboxCapacity (int capacity)
+	{
+		this.mailboxCapacity = capacity;
+	}
+	
 	
 	//Set alternate email.
+	public void setAlternateEmail(String altEmail)
+	{
+		this.alternateEmail = altEmail;
+	}
 	
 	//Change password.
+	public void changePassword(String password)
+	{
+		this.password = password;
+	}
+	
+	public int getMailboxCapacity()
+	{
+		return mailboxCapacity;
+	}
+	
+	public String getAlternateEmail()
+	{
+		return alternateEmail;
+	}
+	public String getPassword()
+	{
+		return password;
+	}
 }	
+
