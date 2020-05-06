@@ -7,8 +7,8 @@ public class EmailApp {
 		
 		Email em1 = new Email("John", "Smith");
 		
-		em1.setAlternateEmail("js@email.com");
-		System.out.println(em1.getAlternateEmail());
+		System.out.println(em1.showInfo());
+		
 	}
 
 }
